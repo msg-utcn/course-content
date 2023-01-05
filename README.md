@@ -17,7 +17,7 @@ The course duration will be of 9 weeks each with a 2 hour class.
 3. Backend: Setting up the API
   - Brief presentation on NX
     - Mono-repo vs Multi-repo 
-  - Presentatinon on Nest.js
+  - Presentation on Nest.js
   - Modules, Controllers, Services
   - Testing using Postman
   - Setting up OpenAPI
