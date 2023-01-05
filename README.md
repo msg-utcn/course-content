@@ -1,5 +1,7 @@
 # Course Content
 
+The course duration will be of 9 weeks each with a 2 hour class.
+
 1. Kickoff, Overview, Setup and Expectations (2h)
   - We will get to briefly know each other.
   - We will present the course content and an example of the final application they will achieve.
