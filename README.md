@@ -32,21 +32,20 @@
   - Explaining authorization
   - Setting up an Admin User role
 6. Frontend: Angular setup
-  - architecture overview (services, directives and components)
+  - Architecture Overview (services, directives and components)
   - SPA (Single Page App) vs SSR (Server Side Rendering)
-  - create a starting point app
-  - observable vs promise
-  - create first components and connect with the backend (HTTPClient)
+  - Create a starting point app
+  - Observable vs Promise
+  - Create first components and connect with the backend (HttpClient)
 7. Frontend: CRUD pages and authentication
-  - login page
-  - reactive forms
-  - routings, guards
-8. Frontend: admin app
-  - shared components library (we can provide a starting point)
-  - understand why it's important to separate this app
-  - resource management (users, data...)
-  - security
-9. Frontend: final app
-  - reviws
-  - free talk
-  - feedback
+  - Login page
+  - Reactive forms
+  - Routings, guards
+8. Frontend: Admin Application
+  - Shared components library (we can provide a starting point)
+    - understand why it's important to separate this app
+  - Resource management (users, data...)
+  - Security
+9. Frontend: Final Application Review
+  - Student Project Code Review
+  - Feedback and Discussions
