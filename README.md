@@ -12,7 +12,7 @@
   - JavaScript & TypeScript Introduction
   - SCSS/CSS Introduction
   - Brief presentation on NX
-  - monoroepo vs multirepo
+    - Mono-repo vs Multi-repo
 3. Backend: Setting up the API
   - Presentatinon on Nest.js
   - Modules, Controllers, Services
