@@ -12,6 +12,7 @@
   - JavaScript & TypeScript Introduction
   - SCSS/CSS Introduction
   - Brief presentation on NX
+  - monoroepo vs multirepo
 3. Backend: Setting up the API
   - Presentatinon on Nest.js
   - Modules, Controllers, Services
@@ -30,3 +31,22 @@
   - Testing Authentication through Postman and OpenApi
   - Explaining authorization
   - Setting up an Admin User role
+6. Frontend: Angular setup
+  - architecture overview (services, directives and components)
+  - SPA (Single Page App) vs SSR (Server Side Rendering)
+  - create a starting point app
+  - observable vs promise
+  - create first components and connect with the backend (HTTPClient)
+7. Frontend: CRUD pages and authentication
+  - login page
+  - reactive forms
+  - routings, guards
+8. Frontend: admin app
+  - shared components library (we can provide a starting point)
+  - understand why it's important to separate this app
+  - resource management (users, data...)
+  - security
+9. Frontend: final app
+  - reviws
+  - free talk
+  - feedback
