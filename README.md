@@ -13,6 +13,7 @@
   - SCSS/CSS Introduction
   - Brief presentation on NX
     - Mono-repo vs Multi-repo
+  - Git Basics
 3. Backend: Setting up the API
   - Presentatinon on Nest.js
   - Modules, Controllers, Services
