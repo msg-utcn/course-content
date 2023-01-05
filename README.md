@@ -11,10 +11,10 @@
   - Design patterns we will use in the application (e.g.: Dependency Injection)
   - JavaScript & TypeScript Introduction
   - SCSS/CSS Introduction
-  - Brief presentation on NX
-    - Mono-repo vs Multi-repo
   - Git Basics
 3. Backend: Setting up the API
+  - Brief presentation on NX
+    - Mono-repo vs Multi-repo 
   - Presentatinon on Nest.js
   - Modules, Controllers, Services
   - Testing using Postman
