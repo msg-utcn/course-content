@@ -2,7 +2,7 @@
 
 The course duration will be of 9 weeks each with a 2 hour class.
 
-1. Kickoff, Overview, Setup and Expectations (2h)
+**1. Kickoff, Overview, Setup and Expectations (2h)**
 
 1.1. Presentation:
   - We will get to briefly know each other.
@@ -18,7 +18,7 @@ The course duration will be of 9 weeks each with a 2 hour class.
   - Install MySql Workbench
   - Install Webstorm
   
-2. Introduction into basic principles for Web Development
+**2. Introduction into basic principles for Web Development**
 
 2.1. Presentation:
   - Client-Server and how the communicate (HTTP, WS)
@@ -31,7 +31,8 @@ The course duration will be of 9 weeks each with a 2 hour class.
 2.2. Practical:
   - Clone sample typescript/css applications
   
-3. Backend: Setting up the API
+
+**3. Backend: Setting up the API**
 
 3.1. Presentation:
   - Brief presentation on NX
@@ -47,7 +48,8 @@ The course duration will be of 9 weeks each with a 2 hour class.
   - Create a CRUD Endpoints for Answers
   - Test the endpoints using Postman
   
-4. Backend: Connecting to a database
+
+**4. Backend: Connecting to a database**
  
 4.1. Presentation:
   - Presentation on what is an ORM
@@ -66,7 +68,8 @@ The course duration will be of 9 weeks each with a 2 hour class.
 4.3 Homework
   - Create endpoint for retrieving the total rating of a User (All Question Rating + All Answer Rating)
 
-5. Backend: Authentication and authorization
+
+**5. Backend: Authentication and authorization**
 
 4.1. Presentation:
   - Explaining how authentication works
@@ -85,7 +88,7 @@ The course duration will be of 9 weeks each with a 2 hour class.
 5.3 Homework
   - Create a filter query endpoint on the following: "Topic", "Title", "PostedBy"
   
-6. Frontend: Angular setup
+**6. Frontend: Angular setup**
   - Architecture Overview (services, directives and components)
   - SPA (Single Page App) vs SSR (Server Side Rendering)
   - Create a starting point app
@@ -93,7 +96,7 @@ The course duration will be of 9 weeks each with a 2 hour class.
   - Create first components and connect with the backend (HttpClient)
 
 
-7. Frontend: CRUD pages and authentication
+**7. Frontend: CRUD pages and authentication**
   - Login page
   - Reactive forms
   - Routings, guards
