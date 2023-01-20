@@ -71,13 +71,13 @@ The course duration will be of 9 weeks each with a 2 hour class.
 
 **5. Backend: Authentication and authorization**
 
-4.1. Presentation:
+- 5.1. Presentation:
   - Explaining how authentication works
     - Types of authentications (Basic, JWT)
   - Explaining authorization
   - Explain what the Admin User role can do
 
-4.2. Practical:
+- 5.2. Practical:
   - Create a register and login endpoint
   - Setting up a JWT Token authentication
     - Creating a guard for the endpoint
@@ -85,27 +85,49 @@ The course duration will be of 9 weeks each with a 2 hour class.
   - Setting up an Admin User role (Delete)
   - Finish with a filter query endpoint on topic
   
-5.3 Homework
+- 5.3 Homework
   - Create a filter query endpoint on the following: "Topic", "Title", "PostedBy"
   
 **6. Frontend: Angular setup**
+
+- 6.1. Presentation:
   - Architecture Overview (services, directives and components)
   - SPA (Single Page App) vs SSR (Server Side Rendering)
-  - Create a starting point app
   - Observable vs Promise
-  - Create first components and connect with the backend (HttpClient)
-
-
-**7. Frontend: CRUD pages and authentication**
-  - Login page
   - Reactive forms
+
+- 6.2. Practical:
+  - Create a starting point app
+  - Create first components and connect with the backend (HttpClient)
+    - **Disable the BE guard until you have Authentication**
+  - Create Question Form
+  - Create Answer Form
+
+- 6.3. Homework:  
+  - Perform Update on Question/Answer
+  - Perform Delete on Question/Answer
+  
+**7. Frontend: CRUD pages and authentication**
+
+- 7.1. Presentation:
+  - Login from the Client Perspective
+    - **Add back the BE guard for Authentication**
   - Routings, guards
-8. Frontend: Admin Application
+
+- 7.2. Practical:
+  - Create Login page / Register Page
+  - Create List page for Question
+  - Create View Question & its Answers
+
+- 7.3. Homework:  
+  - Filter on question based on the following: "Topic", "Title", "PostedBy"
+  
+**8. Frontend: Admin Application**
   - Shared components library (we can provide a starting point)
     - understand why it's important to separate this app
   - Resource management (users, data...)
   - Security
-9. Frontend: Final Application Review
+**9. Frontend: Final Application Review**
   - Student Project Code Review
   - Feedback and Discussions
 
