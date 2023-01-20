@@ -52,3 +52,54 @@ The course duration will be of 9 weeks each with a 2 hour class.
 9. Frontend: Final Application Review
   - Student Project Code Review
   - Feedback and Discussions
+
+## Course Application
+
+The example application will be a "Stack Overflow" variant in which you will be able to:
+- Register and Authenticate
+- CRUD on Questions
+- CRUD on Answers
+- Rating Question/Answers and counting total for a User
+- Search Questions & Answers
+
+And for the people wanting to do more:
+- Badge Rewards
+
+### Modelling
+
+```typescript
+
+export enum QuestionTopic {
+  JavaScript = 'JavaScript',
+  Java = 'Java',
+  Go = 'Go',
+  Rust = 'Rust',
+  WebAssembly = 'WebAssembly'
+}
+
+export interface IQuestion {
+  id?: string;
+  title: string;
+  postedBy: string;
+  content: string;
+  topic: string;
+  rating?: number;
+  creationDate: string;
+}
+
+export interface IAnswer {
+  id?: string;
+  parentId: string;
+  postedBy: string;
+  content: string;
+  rating?: number;
+  creationDate: string;
+}
+
+export interface IStackUser {
+  id?: string;
+  email: string;
+  password: string;
+}
+
+```
