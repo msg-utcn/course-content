@@ -3,24 +3,51 @@
 The course duration will be of 9 weeks each with a 2 hour class.
 
 1. Kickoff, Overview, Setup and Expectations (2h)
+
+1.1. Presentation:
   - We will get to briefly know each other.
   - We will present the course content and an example of the final application they will achieve.
   - We will present the expectations we have of them and what they can achieve for the end of the course.
   - We will make together the necessary setup on their machine.
+  
+1.2. Practical:
+  - Install Node.js
+  - Install Angular Cli
+  - Install Git
+  - Install Nx
+  - Install MySql Workbench
+  - Install Webstorm
+  
 2. Introduction into basic principles for Web Development
+
+2.1. Presentation:
   - Client-Server and how the communicate (HTTP, WS)
   - Application Architecture
   - Design patterns we will use in the application (e.g.: Dependency Injection)
   - JavaScript & TypeScript Introduction
   - SCSS/CSS Introduction
   - Git Basics
+
+2.2. Practical:
+  - Clone sample typescript/css applications
+  
 3. Backend: Setting up the API
+
+3.1. Presentation:
   - Brief presentation on NX
-    - Mono-repo vs Multi-repo 
+    - Mono-repo vs Multi-repo
+    - Internal Library
   - Presentation on Nest.js
   - Modules, Controllers, Services
   - Testing using Postman
   - Setting up OpenAPI
+  
+3.2. Practical:
+  - Initialize application with Nx (we will have a sample in the Repository)
+  - Create Library to share interfaces between UI/BE
+  - Create a CRUD Controller on Question
+  
+  
 4. Backend: Connecting to a database
   - Presentation on what is an ORM
   - Setting up the database
