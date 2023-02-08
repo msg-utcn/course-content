@@ -33,6 +33,15 @@ The course duration will be of 9 weeks each with a 2 hour class.
   
 
 **3. Backend: Setting up the API**
+3.0 Commands
+- Run `npx create-nx-workspace@15.5.0 course-project`
+  - Select `integrated`
+  - Select `apps`
+- Run `cd ./course-project`
+- Run `npm install -D @nrwl/nest`
+- Run `npm install -D @nrwl/angular`
+- 
+
 
 3.1. Presentation:
   - Brief presentation on NX
