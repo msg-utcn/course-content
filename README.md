@@ -17,6 +17,7 @@ The course duration will be of 9 weeks each with a 2 hour class.
   - Install Nx
   - Install MySql Workbench
   - Install Webstorm
+  - Install Postman
   
 **2. Introduction into basic principles for Web Development**
 
