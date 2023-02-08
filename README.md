@@ -23,6 +23,7 @@ The course duration will be of 9 weeks each with a 2 hour class.
 2.1. Presentation:
   - Client-Server and how the communicate (HTTP, WS)
   - Application Architecture
+  - Promises
   - Design patterns we will use in the application (e.g.: Dependency Injection)
   - JavaScript & TypeScript Introduction
   - SCSS/CSS Introduction
