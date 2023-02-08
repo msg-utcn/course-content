@@ -40,7 +40,13 @@ The course duration will be of 9 weeks each with a 2 hour class.
 - Run `cd ./course-project`
 - Run `npm install -D @nrwl/nest`
 - Run `npm install -D @nrwl/angular`
-- 
+- Run `npx nx g @nrwl/nest:app api`
+- Run `npx nx g @nrwl/angular:app ui`
+  - Select `Which stylesheet format would you like to use` => `.scss`
+  - Select `Would you like to configure routing for this application?` => `No` (false)
+- Add the following `scripts` to `package.json`
+  - `nx serve --project=api`
+  - `nx serve --project=ui`
 
 
 3.1. Presentation:
