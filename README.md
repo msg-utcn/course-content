@@ -65,9 +65,15 @@ The course duration will be of 9 weeks each with a 2 hour class.
   - Create model schema for Questions and Answers
   - Create a CRUD Endpoints for Question
   - Create a CRUD Endpoints for Answers
-  - Create a CRUD Endpoints for Users
   - Test the endpoints using Postman
-  
+
+3.3. Homework
+  - Create a module for the Users having the following:
+    - A User model
+    - Dtos for UserDto, RegisterUserDto, LoginUserDto
+      - Add description for Swagger for the dto's 
+    - A Mapper mapping a UserModel to UserDto
+    - A service with the following methods: `registerUser`, `getUserById`, `getUserByEmail`, `checkLoginCredentials` 
 
 **4. Backend: Connecting to a database**
  
