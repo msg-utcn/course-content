@@ -192,10 +192,17 @@ export interface IAnswer {
   creationDate: string;
 }
 
-export interface IStackUser {
+export interface IUser {
   id?: string;
+  name: string;
   email: string;
   password: string;
+  role: UserRole;
+}
+
+export enum UserRole {
+  USER = 'USER',
+  ADMIN = 'ADMIN'
 }
 
 ```
