@@ -56,6 +56,7 @@ The course duration will be of 9 weeks each with a 2 hour class.
   - Brief presentation on NX
     - Mono-repo vs Multi-repo
   - Presentation on Nest.js
+  - Explanation on DTO, Models, Mappers
   - Modules, Controllers, Services
   - Setting up OpenAPI
   
@@ -64,6 +65,7 @@ The course duration will be of 9 weeks each with a 2 hour class.
   - Create model schema for Questions and Answers
   - Create a CRUD Endpoints for Question
   - Create a CRUD Endpoints for Answers
+  - Create a CRUD Endpoints for Users
   - Test the endpoints using Postman
   
 
@@ -72,15 +74,13 @@ The course duration will be of 9 weeks each with a 2 hour class.
 4.1. Presentation:
   - Presentation on what is an ORM
   - Setting up the database
-  - Explanation on DTO, Models and the contract between the UI and the API
-  - Explain Nx internal libraries
+  - Explanation on the contract between the UI and the API
   
 4.2. Practical:
   - Connect to the database
   - Initialize Schema using TypeORM
-  - Create DTO and mappers 
+  - Create more specific DTO and mappers 
   - Creating a repository and using it for the API endpoints
-  - Create internal library to share types with the UI
   - Test the endpoints using Postman
 
 4.3 Homework
