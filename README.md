@@ -83,8 +83,8 @@ The course duration will be of 9 weeks each with a 2 hour class.
   - Create env file
   - Run `npm install bcrypt`
   - Run `npm install -D @types/bcrypt`
+  - Run `npm install dayjs`
   
-
 4.1. Presentation:
   - Presentation on what is an ORM
   - Setting up the database
