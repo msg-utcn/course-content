@@ -105,6 +105,7 @@ The course duration will be of 9 weeks each with a 2 hour class.
     - Link Question and Answers through a `one-to-many` to the `User`
     - Implement the services for Question and Answers
   - Test the endpoints using Postman
+  - Implement `class-validator` to validate the dtos
 
 4.3 Homework
   - Create endpoint for retrieving the total rating of a User (All Question Rating + All Answer Rating)
