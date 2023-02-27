@@ -99,8 +99,9 @@ The course duration will be of 9 weeks each with a 2 hour class.
     - Add a Controller Service for Users (`getUserById`, `getUsers`)
     - Test the controller
   - Create more specific DTO and mappers
-    - Add `CreateAnswerDto`, `UpdateAnswerDto`, `IncreaseRatingAnswerDto`, `CreateQuestionDto`, `UpdateQuestionDto`, `IncreaseRatingQuestionDto`
+    - Add `CreateAnswerDto`, `UpdateAnswerDto`, `CreateQuestionDto`, `UpdateQuestionDto` and a new enum for `RatingUpdateType`
       - Update mappers for the new DTO and service
+      - Create new methods (controller/service) for updating rating
   - Initialize schema for the Question and Answers
     - Link Question and Answers through a `one-to-many` to the `User`
     - Implement the services for Question and Answers
