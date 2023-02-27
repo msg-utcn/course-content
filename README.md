@@ -92,9 +92,18 @@ The course duration will be of 9 weeks each with a 2 hour class.
   
 4.2. Practical:
   - Connect to the database
+    - Use `TypeORM.forRootAsync` and `ConfigService` to establish connection
   - Initialize Schema using TypeORM
-  - Create more specific DTO and mappers 
-  - Creating a repository and using it for the API endpoints
+    - Annotate with `@Entity` and `@Column` the UserModel
+    - Implement UsersService and hash passowrd on registration
+    - Add a Controller Service for Users (`getUserById`, `getUsers`)
+    - Test the controller
+  - Create more specific DTO and mappers
+    - Add `CreateAnswerDto`, `UpdateAnswerDto`, `IncreaseRatingAnswerDto`, `CreateQuestionDto`, `UpdateQuestionDto`, `IncreaseRatingQuestionDto`
+      - Update mappers for the new DTO and service
+  - Initialize schema for the Question and Answers
+    - Link Question and Answers through a `one-to-many` to the `User`
+    - Implement the services for Question and Answers
   - Test the endpoints using Postman
 
 4.3 Homework
