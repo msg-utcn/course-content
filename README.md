@@ -103,7 +103,8 @@ The course duration will be of 9 weeks each with a 2 hour class.
       - Update mappers for the new DTO and service
       - Create new methods (controller/service) for updating rating
   - Initialize schema for the Question and Answers
-    - Link Question and Answers through a `one-to-many` to the `User`
+    - Link Question and Answers through a `one-to-many` to the `User` and between themselves
+      - We will need to annotate with `ManyToOne` and `OneToMany` in both sides
     - Implement the services for Question and Answers
   - Test the endpoints using Postman
   - Implement `class-validator` to validate the dtos
