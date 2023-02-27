@@ -76,7 +76,15 @@ The course duration will be of 9 weeks each with a 2 hour class.
     - A service with the following methods: `registerUser`, `getUserById`, `getUserByEmail`, `checkLoginCredentials` 
 
 **4. Backend: Connecting to a database**
- 
+
+4.0 Commands
+  - Run `npm install @nestjs/typeorm typeorm pg`
+  - Run `npm install @nestjs/config`
+  - Create env file
+  - Run `npm install bcrypt`
+  - Run `npm install -D @types/bcrypt`
+  
+
 4.1. Presentation:
   - Presentation on what is an ORM
   - Setting up the database
