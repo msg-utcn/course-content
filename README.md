@@ -4,13 +4,13 @@ The course duration will be of 9 weeks each with a 2 hour class.
 
 **1. Kickoff, Overview, Setup and Expectations (2h)**
 
-1.1. Presentation:
+- 1.1. Presentation:
   - We will get to briefly know each other.
   - We will present the course content and an example of the final application they will achieve.
   - We will present the expectations we have of them and what they can achieve for the end of the course.
   - We will make together the necessary setup on their machine.
   
-1.2. Practical:
+- 1.2. Practical:
   - Install Node.js
   - Install Angular Cli
   - Install Git
@@ -21,7 +21,7 @@ The course duration will be of 9 weeks each with a 2 hour class.
   
 **2. Introduction into basic principles for Web Development**
 
-2.1. Presentation:
+- 2.1. Presentation:
   - Client-Server and how the communicate (HTTP, WS)
   - Application Architecture
   - Promises
@@ -30,13 +30,13 @@ The course duration will be of 9 weeks each with a 2 hour class.
   - SCSS/CSS Introduction
   - Git Basics
 
-2.2. Practical:
+- 2.2. Practical:
   - Clone sample typescript/css applications
   
 
 **3. Backend: Setting up the API**
 
-3.0. Commands
+- 3.0. Commands
 - Run `npx create-nx-workspace@15.5.0 course-project`
   - Select `integrated`
   - Select `apps`
@@ -52,7 +52,7 @@ The course duration will be of 9 weeks each with a 2 hour class.
   - `nx serve --project=ui`
 
 
-3.1. Presentation:
+- 3.1. Presentation:
   - Brief presentation on NX
     - Mono-repo vs Multi-repo
   - Presentation on Nest.js
@@ -60,14 +60,14 @@ The course duration will be of 9 weeks each with a 2 hour class.
   - Modules, Controllers, Services
   - Setting up OpenAPI
   
-3.2. Practical:
+- 3.2. Practical:
   - Initialize application with Nx (we will have a sample in the Repository)
   - Create model schema for Questions and Answers
   - Create a CRUD Endpoints for Question
   - Create a CRUD Endpoints for Answers
   - Test the endpoints using Postman
 
-3.3. Homework
+- 3.3. Homework
   - Create a module for the Users having the following:
     - A User model
     - Dtos for UserDto, RegisterUserDto, LoginUserDto
@@ -77,7 +77,7 @@ The course duration will be of 9 weeks each with a 2 hour class.
 
 **4. Backend: Connecting to a database**
 
-4.0 Commands
+- 4.0 Commands
   - Run `npm install @nestjs/typeorm typeorm pg`
   - Run `npm install @nestjs/config`
   - Create env file
@@ -85,12 +85,12 @@ The course duration will be of 9 weeks each with a 2 hour class.
   - Run `npm install -D @types/bcrypt`
   - Run `npm install dayjs`
   
-4.1. Presentation:
+- 4.1. Presentation:
   - Presentation on what is an ORM
   - Setting up the database
   - Explanation on the contract between the UI and the API
   
-4.2. Practical:
+- 4.2. Practical:
   - Connect to the database
     - Use `TypeORM.forRootAsync` and `ConfigService` to establish connection
   - Initialize Schema using TypeORM
@@ -114,6 +114,9 @@ The course duration will be of 9 weeks each with a 2 hour class.
 
 
 **5. Backend: Authentication and authorization**
+
+- 5.0 Commands
+- 
 
 - 5.1. Presentation:
   - Explaining how authentication works
