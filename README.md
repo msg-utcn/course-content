@@ -149,6 +149,7 @@ The course duration will be of 9 weeks each with a 2 hour class.
   
 - 5.3 Homework
   - Create a filter query endpoint on the following: "Topic", "Title", "PostedBy"
+  - Check that a question/answer can only be modified/deleted by the owner
   
 **6. Frontend: Angular setup**
 
