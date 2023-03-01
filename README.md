@@ -241,7 +241,7 @@ export interface IUser {
   name: string;
   email: string;
   password: string;
-  role: UserRole;
+  roles: UserRole[];
 }
 
 export enum UserRole {
