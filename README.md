@@ -107,17 +107,20 @@ The course duration will be of 9 weeks each with a 2 hour class.
       - We will need to annotate with `ManyToOne` and `OneToMany` in both sides
     - Implement the services for Question and Answers
   - Test the endpoints using Postman
-  - Implement `class-validator` to validate the dtos
 
 4.3 Homework
   - Create endpoint for retrieving the total rating of a User (All Question Rating + All Answer Rating)
+  - Implement `class-validator` to validate the dtos
 
 
 **5. Backend: Authentication and authorization**
 
 - 5.0 Commands
-- 
-
+  - Run `npm install --save @nestjs/passport passport passport-local`
+  - Run `npm install --save-dev @types/passport-local`
+  - Run `npm install --save @nestjs/jwt passport-jwt`
+  - Run `npm install --save-dev @types/passport-jwt`
+  
 - 5.1. Presentation:
   - Explaining how authentication works
     - Types of authentications (Basic, JWT)
@@ -125,12 +128,24 @@ The course duration will be of 9 weeks each with a 2 hour class.
   - Explain what the Admin User role can do
 
 - 5.2. Practical:
-  - Create a register and login endpoint
+  - Create a auth module
+    - Create a register and login endpoint
+    - Import PassportModule
+    - Create AuthService to validate
+  - Setting up a Local Login
+    - Move register endpoint to auth module
+    - Create `LocalAuthGuard` and `LocalAuthStrategy`
+    - Add `LocalAuthGuard` to the `/login` endpoint
   - Setting up a JWT Token authentication
-    - Creating a guard for the endpoint
+    - Import JwtModule and import secret and expiration time through the ConfigService
+    - Create types for JwtPayload and JwtToken
+    - Creating a `JwtStrategy` and `JwtGuard`
+    - Add JwtGuard to UsersController and QuestionManagementController
+  - Add OpenAPI support for authentication
+    - Tag secured controllers with ApiBearerAuth
+    - In `main.ts` set addBearerAuth on swaggerConfig
   - Testing Authentication through Postman and OpenApi
   - Setting up an Admin User role (Delete)
-  - Finish with a filter query endpoint on topic
   
 - 5.3 Homework
   - Create a filter query endpoint on the following: "Topic", "Title", "PostedBy"
