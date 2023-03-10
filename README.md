@@ -12,9 +12,7 @@ The course duration will be of 9 weeks each with a 2 hour class.
   
 - 1.2. Practical:
   - Install Node.js
-  - Install Angular Cli
   - Install Git
-  - Install Nx
   - Install Postgres
   - Install Webstorm
   - Install Postman
