@@ -15,7 +15,7 @@ The course duration will be of 9 weeks each with a 2 hour class.
   - Install Angular Cli
   - Install Git
   - Install Nx
-  - Install MySql Workbench
+  - Install Postgres
   - Install Webstorm
   - Install Postman
   
