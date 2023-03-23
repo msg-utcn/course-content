@@ -21,4 +21,4 @@ The workflow is as follow:
 
 # Communication 
 
-It can be done via discord by following [this link](https://discord.gg/npzqbSyE) on this [`#utcn-course`](https://discord.gg/29rVN692cm)) channel. To gain access to the channel please send us a message via discord to one of the `msgdevs` assigned to the course (`TimeKnow#9586` or `Alex.#5719`)
+It can be done via discord by following [this link](https://discord.gg/npzqbSyE) on this [`#utcn-course`](https://discord.gg/29rVN692cm) channel. To gain access to the channel please send us a message via discord to one of the `msgdevs` assigned to the course (`TimeKnow#9586` or `Alex.#5719`)
