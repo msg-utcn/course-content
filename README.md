@@ -9,7 +9,7 @@ We strongly encourge you to develop the solution yourself before cloning the res
 
 # Assignments
 
-In order to properly review your assignments you will need to first create a repository under the organization by clicking [this link](/).
+In order to properly review your assignments you will need to first create a repository under the organization by clicking [this link](https://classroom.github.com/a/9tNzQ6qJ).
 Afterwards, you will need to clone the repository and start working on it.
 The workflow is as follow:
 - Take the latest `master` branch code
