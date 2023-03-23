@@ -18,3 +18,7 @@ The workflow is as follow:
 - Create a Pull-Request and notify us via Discord/Email/Github.
 - We will review it and give you the approval
 - Merge it into master but take care to not delete the branch.
+
+# Communication 
+
+It can be done via discord by following [this link](https://discord.gg/npzqbSyE) on this [utcn-course](https://discord.com/channels/994951299223257118/1088004452226715709) channel
