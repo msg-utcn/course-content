@@ -1,0 +1,60 @@
+h1 {
+  color: darkblue;
+  font-size: 32px;
+  text-transform: uppercase;
+}
+
+h2 {
+  color: darkred;
+}
+
+h3 {
+  color: blue;
+}
+
+p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+h1, h2, h3 {
+  font-family: sans-serif;
+}
+
+footer {
+  font-size: 12px;
+  /*padding-top: 20px;*/
+  /*padding-right: 5px;*/
+  /*padding-bottom: 5px;*/
+  /*padding-left: 15px;*/
+  padding: 20px 5px 5px 15px;
+}
+
+#whatIs {
+  color: red;
+  font-size: 36px;
+}
+
+.article-header {
+  background-color: #ebebeb;
+}
+
+.article-content {
+  padding: 20px;
+  background-color: #ebebeb;
+  margin-top: 40px;
+}
+
+li:first-child {
+  font-style: italic;
+}
+
+li:last-child {
+  font-weight: bold;
+}
+
+li:nth-child(2) {
+  color: red;
+}
+
+/*# sourceMappingURL=style.css.map */
