@@ -26,7 +26,8 @@ We have attached some materials to assist you
 ## Setup
 
 - Clone your personal repository onto your machine
-- Checkout a new branch and name it `week-2-assignment`
+- Create a new branch from `main` and name it `week-2-assignment`
+  - Commit & Push all your changes there 
 - Create a folder under your project root `/examples`
 - `cd ./examples`, you will work under this folder
 - Create a pull request and notify us when you are done with the implementation
@@ -40,15 +41,15 @@ We have attached some materials to assist you
 
 ### Files
 - Create a HTML document called `index.html`
-  - It will just contain a button and an unordered list (initialy empty)
+  - It will just contain a button and an unordered list (initially empty)
 - Create a Typescript file called `api-implementation.ts`
 - Reference the javascript version (`api-implementation.js`) of the file inside your `index.html`
 
 ### Coding
 - Choose an API from [the list of free apis](https://apipheny.io/free-api/)
 - When you press the button make a `GET` request to retrieve any kind of data of your choosing **(a list of data)**
-- You will use `fetch` for this example (is supported by Node.js >= v18 and in the browser)
-- Create a function which modifies the DOM of the HTML page to insert the response as `<ul>` elements
+  - You will use `fetch` for this example (is supported by Node.js >= v18 and in the browser)
+  - Create a function which modifies the DOM of the HTML page to insert the response as `<ul>` elements
 - Add some css classes to make the elements (padding, margins, colors) to make it look nicer
 
 ## Further resource (for those interested)
