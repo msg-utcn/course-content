@@ -1,24 +1,26 @@
-# Theory
+# Week 3
 
-Powerpoint presentations will be available under `/presentations` folder, they will be denoted by the week of the presentation `week-xyz`.
+## Assignment 
 
-# Practical
+- Clone this week (branch: `week-3`) onto your computer
+- Run `npm install` inside the cloned folder
+- Install docker onto your device and have it run
+- After installing it you should be able to open a terminal and run `docker --version`
+- Run the `docker-compose.yml` from this week `/docker` folder using the `docker-compose up` in a terminal opened in that folder
+- This will start a postgres database on your device exposed on port `5432` (so take care that port is not in use)
+- Now go back to the root folder and run the application using `npm run serve:api`
+- It should start the application as in our course
 
-For each week the result of the practical part will be available here as a separate branch as `week-branch-xyz`. 
-We strongly encourge you to develop the solution yourself before cloning the result.
+## Reading
 
-# Assignments
+- [Install Docker](https://www.docker.com/products/docker-desktop/)
+  - [Windows Install](https://docs.docker.com/desktop/install/windows-install/)
+  - The WSL2 backend is the recommended approach over HyperV backend
+- [Docker: Getting Started](https://docs.docker.com/get-started/#start-the-tutorial)
+- [Using Docker-Compose](https://docs.docker.com/get-started/08_using_compose/)
+- [Windows Subsystem for Linux (WSL)](https://learn.microsoft.com/en-us/windows/wsl/install)
 
-In order to properly review your assignments you will need to first create a repository under the organization by clicking [this link](https://classroom.github.com/a/9tNzQ6qJ).
-Afterwards, you will need to clone the repository and start working on it.
-The workflow is as follow:
-- Take the latest `master` branch code
-- Checkout a new branch called `week-wyz` (the week for the assignment you are working on)
-- Develop your assignment
-- Create a Pull-Request and notify us via Discord/Email/Github.
-- We will review it and give you the approval
-- Merge it into master but take care to not delete the branch.
+## Videos (Optional)
 
-# Communication 
-
-It can be done via discord by following [this link](https://discord.gg/npzqbSyE) on this [`#utcn-course`](https://discord.gg/29rVN692cm) channel. To gain access to the channel please send us a message via discord to one of the `msgdevs` assigned to the course (`TimeKnow#9586` or `Alex.#5719`)
+- [Docker Tutorial](https://www.youtube.com/watch?v=d-PPOS-VsC8)
+- [Intro to Docker](https://www.youtube.com/watch?v=WcQ3-M4-jik)
