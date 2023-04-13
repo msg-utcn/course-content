@@ -2,7 +2,8 @@
 
 ## Setting Up 
 
-- Clone this week (branch: `week-4`) onto your computer
+- Clone this week (branch: `week-4`) onto your computer and overwrite the code used in your personal repository (or follow the recordings and do the changes yourself)
+  - Take care to not overwrite the hidden `.git` folder
 - Run `npm install` inside the cloned folder
 - Go to `docker` folder and run a `docker-compose up -d` to start the database
 
