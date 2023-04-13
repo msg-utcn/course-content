@@ -8,18 +8,19 @@ import { NestFactory } from '@nestjs/core';
 
 import { AppModule } from './app/app.module';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
-import { SWAGGER_FEATURE } from './app/question-management/question-management.config';
+import { QuestionManagementConfig } from './app/question-management/question-management.config';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   const globalPrefix = 'api';
+  const version = '1.0';
   app.setGlobalPrefix(globalPrefix);
 
   const config = new DocumentBuilder()
-    .setTitle('UTCN Course API')
+    .setTitle('StackUnderflow API')
     .setDescription('The UTCN Course API for Question Management')
-    .setVersion('1.0')
-    .addTag(SWAGGER_FEATURE)
+    .setVersion(version)
+    .addTag(QuestionManagementConfig.SWAGGER_FEATURE)
     .build();
 
   const document = SwaggerModule.createDocument(app, config);

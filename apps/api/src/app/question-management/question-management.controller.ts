@@ -1,4 +1,3 @@
-import { API_ROUTE, SWAGGER_FEATURE } from './question-management.config';
 import {
   Body,
   Controller,
@@ -13,9 +12,10 @@ import { QuestionService } from './question.service';
 import { CreateQuestionDto } from './dtos/create-question.dto';
 import { UpdateQuestionDto } from './dtos/update-question.dto';
 import { ApiTags } from '@nestjs/swagger';
+import { QuestionManagementConfig } from './question-management.config';
 
-@ApiTags(SWAGGER_FEATURE)
-@Controller(API_ROUTE)
+@ApiTags(QuestionManagementConfig.SWAGGER_FEATURE)
+@Controller(QuestionManagementConfig.API_ROUTE)
 export class QuestionManagementController {
   constructor(private questionService: QuestionService) {}
 
