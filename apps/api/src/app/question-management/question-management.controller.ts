@@ -6,6 +6,7 @@ import {
   Param,
   Patch,
   Post,
+  UseGuards,
 } from '@nestjs/common';
 import { QuestionDto } from './dtos/question.dto';
 import { QuestionService } from './question.service';
@@ -13,6 +14,7 @@ import { CreateQuestionDto } from './dtos/create-question.dto';
 import { UpdateQuestionDto } from './dtos/update-question.dto';
 import { ApiTags } from '@nestjs/swagger';
 import { QuestionManagementConfig } from './question-management.config';
+import { JwtAuthGuard } from '../auth/guards/jwt-auth.guard';
 
 @ApiTags(QuestionManagementConfig.SWAGGER_FEATURE)
 @Controller(QuestionManagementConfig.API_ROUTE)
