@@ -1,4 +1,4 @@
-import { Injectable, Logger, UnauthorizedException } from '@nestjs/common';
+import { Injectable } from '@nestjs/common';
 import { UsersService } from '../users/services/users.service';
 import { LoginUserDto } from '../users/dto/login-user.dto';
 import { JwtService } from '@nestjs/jwt';
@@ -14,11 +14,7 @@ export class AuthService {
   ) {}
 
   async validate(dto: LoginUserDto): Promise<UserDto | null> {
-    const isValid = await this.usersService.checkCredentials(
-      new LoginUserDto({
-        ...dto,
-      })
-    );
+    const isValid = await this.usersService.checkCredentials(dto);
     if (isValid) {
       return await this.usersService.getUserByEmail(dto.email);
     }
@@ -26,7 +22,7 @@ export class AuthService {
   }
   async login(dto: JwtPayloadDto): Promise<JwtTokenDto> {
     return {
-      access_token: await this.jwtService.signAsync({
+      access_token: this.jwtService.sign({
         email: dto.email,
         sub: dto.userId,
       }),
