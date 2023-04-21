@@ -4,14 +4,14 @@ import { ApiProperty } from '@nestjs/swagger';
 export class CreateQuestionDto {
   @ApiProperty({
     description: 'The title of the question',
-    example: 'Why am I here?',
+    example: 'What is a promise in JavaScript?',
     required: true,
   })
   title: string;
 
   @ApiProperty({
     description: 'The content of the question',
-    example: 'Idk',
+    example: 'What is a promise in JavaScript?',
     required: true,
   })
   content: string;
