@@ -29,4 +29,15 @@ export class AnswerModel {
 - Annotate the `question-management.controller` with the `UseGuards(JwtAuthGuard)`
 - Test the application that it works
 
+## Bonus Assignment (Optional)
 
+This is a bonus assignment for those who have a little time. The idea behind it is to add validations to our dto's to ensure the user doesn't send malformed data.
+
+### Reading
+- [NestJS Validations](https://docs.nestjs.com/techniques/validation)
+- [NestJS Pipes](https://docs.nestjs.com/pipes)
+
+### Assignment
+- Install the dependencies `npm i --save class-validator class-transformer`
+- Go through each of the application Input(Create, Update) DTO's and add validations that make sense for you (IsNumber, IsString, IsEmail, etc)
+- Set the application in `main.ts` to use the validators globally
