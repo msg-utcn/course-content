@@ -1,5 +1,6 @@
 import { QuestionTopic } from './question-topic';
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
+import { AnswerModel } from './answer.model';
 
 @Entity()
 export class QuestionModel {
@@ -24,6 +25,9 @@ export class QuestionModel {
   @Column({ nullable: false })
   creationDate: string;
 
+  @OneToMany(() => AnswerModel, (answer) => answer.parent)
+  answers?: AnswerModel[];
+
   constructor(values: Partial<QuestionModel>) {
     if (values) {
       this.id = values.id;
@@ -33,6 +37,7 @@ export class QuestionModel {
       this.topic = values.topic;
       this.rating = values.rating;
       this.creationDate = values.creationDate;
+      this.answers = values.answers;
     }
   }
 }

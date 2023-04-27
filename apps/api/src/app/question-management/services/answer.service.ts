@@ -1,6 +1,7 @@
 import {
   BadRequestException,
   Injectable,
+  Logger,
   NotFoundException,
 } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
@@ -16,12 +17,24 @@ import { UpdateAnswerDto } from '../dtos/update-answer.dto';
 export class AnswerService {
   constructor(
     @InjectRepository(AnswerModel)
-    private answerModelRepository: Repository<AnswerModel>
+    private answerModelRepository: Repository<AnswerModel>,
+    @InjectRepository(QuestionModel)
+    private questionModelRepository: Repository<QuestionModel>
   ) {}
 
-  async addAnswer(dto: CreateAnswerDto): Promise<AnswerDto> {
+  async addAnswer(
+    questionId: string,
+    dto: CreateAnswerDto
+  ): Promise<AnswerDto> {
+    const foundQuestion = await this.questionModelRepository.findOneBy({
+      id: questionId,
+    });
+    if (!foundQuestion) {
+      throw new BadRequestException();
+    }
     try {
-      const mappedModel = AnswerMapper.mapCreateDtoToModel(dto);
+      const mappedModel = AnswerMapper.mapCreateDtoToModel(dto, foundQuestion);
+      Logger.log(foundQuestion, questionId);
       const savedModel = await this.answerModelRepository.save(mappedModel);
       return AnswerMapper.mapToDto(savedModel);
     } catch (error) {
@@ -29,8 +42,11 @@ export class AnswerService {
     }
   }
 
-  async readAll(): Promise<AnswerDto[]> {
-    const foundModels = await this.answerModelRepository.find();
+  async readAllByQuestionId(questionId: string): Promise<AnswerDto[]> {
+    const foundModels = await this.answerModelRepository.find({
+      where: { parent: { id: questionId } },
+      relations: ['parent'],
+    });
     if (!foundModels) {
       return [];
     }
@@ -40,6 +56,7 @@ export class AnswerService {
   async update(id: string, dto: UpdateAnswerDto): Promise<AnswerDto> {
     const foundAnswer = await this.answerModelRepository.findOne({
       where: { id },
+      relations: ['parent'],
     });
     if (!foundAnswer) {
       throw new NotFoundException();

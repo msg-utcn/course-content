@@ -60,18 +60,23 @@ export class QuestionManagementController {
     return this.questionService.delete(id);
   }
 
-  @Get('answers')
-  async getAllAnswers(): Promise<AnswerDto[]> {
-    return this.answerService.readAll();
+  @Get(':questionId/answers')
+  async getAllAnswers(
+    @Param('questionId') questionId: string
+  ): Promise<AnswerDto[]> {
+    return this.answerService.readAllByQuestionId(questionId);
   }
 
-  @Post('answers')
-  async addAnswer(@Body() answerDto: CreateAnswerDto): Promise<AnswerDto> {
-    return this.answerService.addAnswer(answerDto);
+  @Post(':questionId/answers')
+  async addAnswer(
+    @Body() answerDto: CreateAnswerDto,
+    @Param('questionId') questionId: string
+  ): Promise<AnswerDto> {
+    return this.answerService.addAnswer(questionId, answerDto);
   }
 
   @ApiImplicitParam({ name: 'answerId', type: String })
-  @Put('answers/:answerId')
+  @Put(':questionId/answers/:answerId')
   async updateAnswer(
     @Body() answerDto: UpdateAnswerDto,
     @Param('answerId') answerId
@@ -80,7 +85,7 @@ export class QuestionManagementController {
   }
 
   @ApiImplicitParam({ name: 'answerId', type: String })
-  @Delete('answers/:answerId')
+  @Delete(':questionId/answers/:answerId')
   async deleteAnswer(@Param('answerId') answerId: string): Promise<void> {
     return this.answerService.delete(answerId);
   }

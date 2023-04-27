@@ -11,12 +11,15 @@ import { QuestionDto } from '../dtos/question.dto';
 import { QuestionMapper } from '../mappers/question.mapper';
 import { CreateQuestionDto } from '../dtos/create-question.dto';
 import { UpdateQuestionDto } from '../dtos/update-question.dto';
+import { AnswerModel } from '../model/answer.model';
 
 @Injectable()
 export class QuestionService {
   constructor(
     @InjectRepository(QuestionModel)
-    private questionModelRepository: Repository<QuestionModel>
+    private questionModelRepository: Repository<QuestionModel>,
+    @InjectRepository(AnswerModel)
+    private answerModelRepository: Repository<AnswerModel>
   ) {}
 
   async readAll(): Promise<QuestionDto[]> {
@@ -60,8 +63,11 @@ export class QuestionService {
   }
 
   async delete(id: string): Promise<void> {
+    const answerDeleteResult = await this.answerModelRepository.delete({
+      parent: { id },
+    });
     const deleteResult = await this.questionModelRepository.delete({ id });
-    if (deleteResult.affected === 0) {
+    if (deleteResult.affected === 0 && answerDeleteResult.affected === 0) {
       throw new BadRequestException();
     }
   }

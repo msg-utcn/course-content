@@ -8,4 +8,9 @@ export class CreateAnswerDto {
     required: true,
   })
   content: string;
+  @ApiProperty({
+    description: 'The question id',
+    required: true,
+  })
+  parentId: string;
 }
