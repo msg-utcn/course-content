@@ -3,8 +3,7 @@ import { ApiProperty } from '@nestjs/swagger';
 export class CreateAnswerDto {
   @ApiProperty({
     description: 'The content of the answer',
-    example:
-      'A placeholder for a value that will be available in the future, allowing us to handle the result of an asynchronous task once it has completed or encountered an error.',
+    example: 'Ask ChatGPT for this answer',
     required: true,
   })
   content: string;
