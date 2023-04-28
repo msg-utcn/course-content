@@ -10,6 +10,13 @@ export class CreateQuestionDto {
   title: string;
 
   @ApiProperty({
+    description: 'The UUID of the User who posted the question',
+    example: '238d8271-33cd-4c31-ab6a-58fc9df30a5e',
+    required: true,
+  })
+  postedBy: string;
+
+  @ApiProperty({
     description: 'The content of the question',
     example: 'What is a promise in JavaScript?',
     required: true,

@@ -17,10 +17,17 @@ export class AnswerDto {
   content: string;
 
   @ApiProperty({
-    description: 'The question of the answer',
+    description: 'The UUID of the question',
+    example: '599c9544-d8da-4761-a17f-d9c21eb5869c',
     required: true,
   })
   parentId: string;
+
+  @ApiProperty({
+    description: 'The UUID of the User who posted the answer',
+    example: 'be238107-891e-4f73-b5e9-82449a856b84',
+  })
+  postedBy: string;
 
   @ApiProperty({
     description:
@@ -39,6 +46,7 @@ export class AnswerDto {
     if (values) {
       this.id = values.id;
       this.content = values.content;
+      this.postedBy = values.postedBy;
       this.parentId = values.parentId;
       this.rating = values.rating;
       this.creationDate = values.creationDate;

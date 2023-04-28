@@ -1,5 +1,6 @@
 import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
 import { QuestionModel } from './question.model';
+import { UserModel } from '../../users/models/user.model';
 
 @Entity()
 export class AnswerModel {
@@ -11,6 +12,9 @@ export class AnswerModel {
     cascade: true,
   })
   parent: QuestionModel;
+
+  @ManyToOne(() => UserModel, (user) => user.answers, { nullable: false })
+  postedBy: UserModel;
 
   @Column({ nullable: false })
   content: string;
@@ -25,6 +29,7 @@ export class AnswerModel {
     if (values) {
       this.id = values.id;
       this.content = values.content;
+      this.postedBy = values.postedBy;
       this.parent = values.parent;
       this.rating = values.rating;
       this.creationDate = values.creationDate;

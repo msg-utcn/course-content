@@ -12,6 +12,7 @@ import { AnswerModel } from '../model/answer.model';
 import { CreateAnswerDto } from '../dtos/create-answer.dto';
 import { AnswerDto } from '../dtos/answer.dto';
 import { UpdateAnswerDto } from '../dtos/update-answer.dto';
+import { UserModel } from '../../users/models/user.model';
 
 @Injectable()
 export class AnswerService {
@@ -19,7 +20,9 @@ export class AnswerService {
     @InjectRepository(AnswerModel)
     private answerModelRepository: Repository<AnswerModel>,
     @InjectRepository(QuestionModel)
-    private questionModelRepository: Repository<QuestionModel>
+    private questionModelRepository: Repository<QuestionModel>,
+    @InjectRepository(UserModel)
+    private userModelRepository: Repository<UserModel>
   ) {}
 
   async addAnswer(
@@ -32,9 +35,18 @@ export class AnswerService {
     if (!foundQuestion) {
       throw new BadRequestException();
     }
+    const foundUser = await this.userModelRepository.findOneBy({
+      id: dto.postedBy,
+    });
+    if (!foundUser) {
+      throw new NotFoundException();
+    }
     try {
-      const mappedModel = AnswerMapper.mapCreateDtoToModel(dto, foundQuestion);
-      Logger.log(foundQuestion, questionId);
+      const mappedModel = AnswerMapper.mapCreateDtoToModel(
+        dto,
+        foundQuestion,
+        foundUser
+      );
       const savedModel = await this.answerModelRepository.save(mappedModel);
       return AnswerMapper.mapToDto(savedModel);
     } catch (error) {
@@ -45,7 +57,7 @@ export class AnswerService {
   async readAllByQuestionId(questionId: string): Promise<AnswerDto[]> {
     const foundModels = await this.answerModelRepository.find({
       where: { parent: { id: questionId } },
-      relations: ['parent'],
+      relations: ['postedBy', 'parent'],
     });
     if (!foundModels) {
       return [];
@@ -56,7 +68,7 @@ export class AnswerService {
   async update(id: string, dto: UpdateAnswerDto): Promise<AnswerDto> {
     const foundAnswer = await this.answerModelRepository.findOne({
       where: { id },
-      relations: ['parent'],
+      relations: ['postedBy', 'parent'],
     });
     if (!foundAnswer) {
       throw new NotFoundException();

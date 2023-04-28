@@ -3,6 +3,7 @@ import { AnswerDto } from '../dtos/answer.dto';
 import { CreateAnswerDto } from '../dtos/create-answer.dto';
 import { UpdateAnswerDto } from '../dtos/update-answer.dto';
 import { QuestionModel } from '../model/question.model';
+import { UserModel } from '../../users/models/user.model';
 
 export class AnswerMapper {
   static mapToDto(model: AnswerModel): AnswerDto {
@@ -17,12 +18,14 @@ export class AnswerMapper {
 
   static mapCreateDtoToModel(
     dto: CreateAnswerDto,
-    parent: QuestionModel
+    parent: QuestionModel,
+    postedByUser: UserModel
   ): AnswerModel {
     return new AnswerModel({
       id: undefined,
       content: dto.content,
       parent,
+      postedBy: postedByUser,
       rating: 0,
       creationDate: new Date(),
     });
@@ -36,6 +39,7 @@ export class AnswerMapper {
       id: oldModel.id,
       content: dto.content,
       parent: oldModel.parent,
+      postedBy: oldModel.postedBy,
       rating: oldModel.rating,
       creationDate: oldModel.creationDate,
     });

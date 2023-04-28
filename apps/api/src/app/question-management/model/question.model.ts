@@ -1,6 +1,13 @@
 import { QuestionTopic } from './question-topic';
-import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from 'typeorm';
+import {
+  Column,
+  Entity,
+  ManyToOne,
+  OneToMany,
+  PrimaryGeneratedColumn,
+} from 'typeorm';
 import { AnswerModel } from './answer.model';
+import { UserModel } from '../../users/models/user.model';
 
 @Entity()
 export class QuestionModel {
@@ -10,8 +17,11 @@ export class QuestionModel {
   @Column({ nullable: false })
   title: string;
 
-  @Column({ nullable: true })
-  postedBy: string;
+  @ManyToOne(() => UserModel, (user) => user.questions, {
+    nullable: false,
+    cascade: true,
+  })
+  postedBy: UserModel;
 
   @Column({ nullable: false })
   content: string;
