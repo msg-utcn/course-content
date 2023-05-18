@@ -1,4 +1,4 @@
-import {Component, DoCheck, EventEmitter, Output} from '@angular/core';
+import {Component, EventEmitter, Output} from '@angular/core';
 import {Authenticate} from "../../data-models/authenticate.model";
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 
@@ -7,17 +7,8 @@ import {FormControl, FormGroup, Validators} from "@angular/forms";
   templateUrl: './login-form.component.html',
   styleUrls: ['./login-form.component.scss'],
 })
-export class LoginFormComponent implements DoCheck {
+export class LoginFormComponent {
   @Output() submit = new EventEmitter<Authenticate>();
-
-  // public login(authenticate: Authenticate): void {
-  //   this.submit.emit(authenticate);
-  // }
-
-  ngDoCheck() {
-    console.log('login form check!');
-  }
-
 
   // reactive form
   loginForm = new FormGroup({

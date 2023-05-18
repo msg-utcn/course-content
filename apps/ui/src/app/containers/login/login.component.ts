@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, Component, DoCheck} from '@angular/core';
+import {ChangeDetectionStrategy, Component} from '@angular/core';
 import {Authenticate} from "../../data-models/authenticate.model";
 import {AuthService} from "../../services/auth.service";
 
@@ -8,14 +8,10 @@ import {AuthService} from "../../services/auth.service";
   styleUrls: ['./login.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class LoginComponent implements DoCheck {
+export class LoginComponent {
   constructor(private authService: AuthService) {}
 
   public login(authenticate: Authenticate): void {
     this.authService.login(authenticate).subscribe();
-  }
-
-  ngDoCheck() {
-    console.log('login check!');
   }
 }

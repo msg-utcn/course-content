@@ -1,6 +1,6 @@
 import {Injectable} from "@angular/core";
 import {HttpClient} from "@angular/common/http";
-import {Authenticate} from "../data-models/authenticate.model";
+import {Authenticate, Register} from "../data-models/authenticate.model";
 import {Observable} from "rxjs";
 
 @Injectable({
@@ -9,7 +9,11 @@ import {Observable} from "rxjs";
 export class AuthService {
   constructor(private httpClient: HttpClient) {}
 
-  login(authenticate: Authenticate): Observable<any> {
+  public login(authenticate: Authenticate): Observable<any> {
     return this.httpClient.post('http://localhost:3000/api/auth/login', authenticate);
+  }
+
+  public register(register: Register): Observable<any> {
+    return this.httpClient.post('http://localhost:3000/api/auth/register', register);
   }
 }
