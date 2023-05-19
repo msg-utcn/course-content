@@ -1,6 +1,6 @@
 import {ChangeDetectionStrategy, Component} from '@angular/core';
-import {Register} from "../../data-models/authenticate.model";
-import {AuthService} from "../../services/auth.service";
+import {RegisterService} from "@course-project/auth";
+import {RegisterModel} from "@course-project/data-models";
 
 @Component({
   selector: 'course-project-register',
@@ -9,9 +9,9 @@ import {AuthService} from "../../services/auth.service";
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class RegisterComponent {
-  constructor(private authService: AuthService) {}
+  constructor(private registerService: RegisterService) {}
 
-  public register(register: Register): void {
-    this.authService.register(register).subscribe();
+  public register(register: RegisterModel): void {
+    this.registerService.register(register).subscribe();
   }
 }

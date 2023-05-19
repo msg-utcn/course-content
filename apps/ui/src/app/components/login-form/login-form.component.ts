@@ -1,6 +1,6 @@
 import {Component, EventEmitter, Output} from '@angular/core';
-import {Authenticate} from "../../data-models/authenticate.model";
 import {FormControl, FormGroup, Validators} from "@angular/forms";
+import {AuthenticateModel} from "@course-project/data-models";
 
 @Component({
   selector: 'course-project-login-form',
@@ -8,7 +8,7 @@ import {FormControl, FormGroup, Validators} from "@angular/forms";
   styleUrls: ['./login-form.component.scss'],
 })
 export class LoginFormComponent {
-  @Output() submit = new EventEmitter<Authenticate>();
+  @Output() submit = new EventEmitter<AuthenticateModel>();
 
   // reactive form
   loginForm = new FormGroup({
@@ -20,6 +20,6 @@ export class LoginFormComponent {
     this.submit.emit({
       email: this.loginForm.value.email,
       password: this.loginForm.value.password
-    } as Authenticate);
+    } as AuthenticateModel);
   }
 }

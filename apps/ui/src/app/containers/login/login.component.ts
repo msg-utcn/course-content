@@ -1,6 +1,6 @@
 import {ChangeDetectionStrategy, Component} from '@angular/core';
-import {Authenticate} from "../../data-models/authenticate.model";
-import {AuthService} from "../../services/auth.service";
+import {AuthenticateModel} from "@course-project/data-models";
+import {LoginService} from "@course-project/auth";
 
 @Component({
   selector: 'course-project-login',
@@ -9,9 +9,11 @@ import {AuthService} from "../../services/auth.service";
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class LoginComponent {
-  constructor(private authService: AuthService) {}
+  constructor(private loginService: LoginService) {}
 
-  public login(authenticate: Authenticate): void {
-    this.authService.login(authenticate).subscribe();
+  public login(authenticate: AuthenticateModel): void {
+    this.loginService.login(authenticate).subscribe(token => {
+      localStorage.setItem('access_token', token.access_token);
+    });
   }
 }

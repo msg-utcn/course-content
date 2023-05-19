@@ -4,6 +4,8 @@ import { AppComponent } from './app.component';
 import {AuthModule, authRoutes} from "./auth.module";
 import {RouterModule} from "@angular/router";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {HTTP_INTERCEPTORS} from "@angular/common/http";
+import {TokenInterceptor} from "@course-project/auth";
 
 @NgModule({
   declarations: [
@@ -12,10 +14,17 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    RouterModule.forRoot([{path: 'auth', children: authRoutes}]),
+    RouterModule.forRoot([
+      {path: 'auth', children: authRoutes},
+      {path: 'questions', loadChildren: () =>
+          import('@course-project/questions').then(module => module.QuestionsModule)
+      }
+      ]),
     AuthModule
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true }
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -1,6 +1,6 @@
 import {Component, EventEmitter, Output} from '@angular/core';
-import {Register} from "../../data-models/authenticate.model";
 import {FormControl, FormGroup, Validators} from "@angular/forms";
+import { RegisterModel } from '@course-project/data-models';
 
 @Component({
   selector: 'course-project-register-form',
@@ -8,7 +8,7 @@ import {FormControl, FormGroup, Validators} from "@angular/forms";
   styleUrls: ['./register-form.component.scss'],
 })
 export class RegisterFormComponent {
-  @Output() submit = new EventEmitter<Register>();
+  @Output() submit = new EventEmitter<RegisterModel>();
 
   // reactive form
   registerForm = new FormGroup({
@@ -22,6 +22,6 @@ export class RegisterFormComponent {
       email: this.registerForm.value.email,
       password: this.registerForm.value.password,
       name: this.registerForm.value.name
-    } as Register);
+    } as RegisterModel);
   }
 }
