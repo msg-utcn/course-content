@@ -12,3 +12,7 @@ export interface QuestionModel {
   rating?: number;
   creationDate?: string;
 }
+
+export interface QuestionsModel {
+  questions: QuestionModel[];
+}
